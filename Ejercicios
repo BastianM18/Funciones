@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta nhrse="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript</title>
+</head>
+<body>
+	<script>	
+
+  // EJERCICIOS DE FUNCIONES 
+
+  /* ¿ESTÁ LLOVIENDO? */
+
+  function avisoLluvia (estaLloviendo) {
+    if (estaLloviendo) {
+      console.log("Esta lloviendo 🌧")
+    } else {
+      console.log("No está lloviendo ⛅")
+    }
+  }
+
+  avisoLluvia(true);
+  avisoLluvia(false);   
+
+
+
+  // CREAR UNA FUNCION "CALCULAR"
+
+  /* 
+  Recibirá 3 parametros: x, y, z.
+  debemos retornar la suma de x + y 
+  multiplicado por * z 
+  */
+
+  MI SOLUCION
+
+  function calcular (x,y,z){
+    return (x + y) * (z)
+  }
+
+  console.log(calcular(2,2,5));
+
+  SOLUCION VIDEO 
+
+  function calcular(x,y,z) {
+    let suma = x + y,
+    resultado = suma * z
+    return resultado
+  }
+
+  console.log(calcular(2,2,5));   
+
+
+
+  // CALCULADORA
+
+  /*
+  Recbirá tres parametros
+  - Un string llamado operacion
+  - Dos números llamados x & y
+
+  Retornamos según el valor de la operación:
+  - Suma
+  - Resta
+  - Multiplicacion
+  - Division -> x / y
+  - exponenciación -> x elevado por el valor de y
+  - residuo -> residuo de dividir x / y
+  - en cualquier otro caso, devolvemos -1
+  */
+
+  function calculadora(operacion,x,y) {
+    if(operacion == "suma") {
+      return x + y
+    } if (operacion == "resta") {
+      return x - y
+    } if (operacion == "multiplicacion") {
+      return x * y
+    } if (operacion == "division") {
+      return x / y
+    } if (operacion == "exponenciacion") {
+      return x ** y
+    } if (operacion == "residuo") {
+      return x % y
+    } else {
+      return -1
+    }
+  }
+
+  console.log(calculadora("suma",5,5));
+  console.log(calculadora("resta",5,5));
+  console.log(calculadora("multiplicacion",5,5));
+  console.log(calculadora("division",5,5));
+  console.log(calculadora("exponenciacion",5,5));
+  console.log(calculadora("residuo",5,5));
+
+	</script>
+</body>
+</html>
